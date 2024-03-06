@@ -1,0 +1,583 @@
+{
+	"info": {
+		"_postman_id": "066c3ce2-1ca4-4465-aa4a-c0f0d462b87d",
+		"name": "Aula Alura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25772748"
+	},
+	"item": [
+		{
+			"name": "AdicionarFilmes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Titulo\" : \"Poeira em alto mar 1\",\r\n    \"Genero\" : \"Ação\",\r\n    \"Duracao\" : 130\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5210/filme/adicionar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5210",
+					"path": [
+						"filme",
+						"adicionar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "AdicionarFilmes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Titulo\" : \"Poeira em alto mar 1\",\r\n    \"Genero\" : \"Ação\",\r\n    \"Duracao\" : 130\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5210/filme/adicionar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5210",
+							"path": [
+								"filme",
+								"adicionar"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 Feb 2024 23:59:04 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "https://localhost:7259/Filme/95"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 95,\n    \"titulo\": \"Poeira em alto mar 1\",\n    \"genero\": \"Ação\",\n    \"duracao\": 130\n}"
+				}
+			]
+		},
+		{
+			"name": "filme/adicionarEmLote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"Titulo\": \"Poeira em alto mar 2\",\r\n        \"Genero\": \"Ação\",\r\n        \"Duracao\": 130\r\n    },\r\n    {\r\n        \"Titulo\": \"Poeira em alto mar 2\",\r\n        \"Genero\": \"Ação\",\r\n        \"Duracao\": 130\r\n    } \r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5210/filme/adicionarEmLote/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5210",
+					"path": [
+						"filme",
+						"adicionarEmLote",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "filme/adicionarEmLote",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"Titulo\": \"Poeira em alto mar 2\",\r\n        \"Genero\": \"Ação\",\r\n        \"Duracao\": 130\r\n    },\r\n    {\r\n        \"Titulo\": \"Poeira em alto mar 2\",\r\n        \"Genero\": \"Ação\",\r\n        \"Duracao\": 130\r\n    } \r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5210/filme/adicionarEmLote/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5210",
+							"path": [
+								"filme",
+								"adicionarEmLote",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "133"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 Feb 2024 23:59:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "https://localhost:7259/Filme/recuperarTodos"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"titulo\": \"Poeira em alto mar 2\",\n        \"genero\": \"Ação\",\n        \"duracao\": 130\n    },\n    {\n        \"titulo\": \"Poeira em alto mar 2\",\n        \"genero\": \"Ação\",\n        \"duracao\": 130\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "RecuperarTodosFilmes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5210/filme/recuperarTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5210",
+					"path": [
+						"filme",
+						"recuperarTodos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "RecuperarTodosFilmes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5210/filme/recuperarTodos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5210",
+							"path": [
+								"filme",
+								"recuperarTodos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "11634"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 Feb 2024 23:58:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"titulo\": \"O Poderoso Chefão\",\n        \"genero\": \"Drama\",\n        \"duracao\": 175,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.0995424-03:00\"\n    },\n    {\n        \"id\": 2,\n        \"titulo\": \"Cidadão Kane\",\n        \"genero\": \"Drama\",\n        \"duracao\": 119,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1004645-03:00\"\n    },\n    {\n        \"id\": 3,\n        \"titulo\": \"Casablanca\",\n        \"genero\": \"Romance\",\n        \"duracao\": 102,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1004827-03:00\"\n    },\n    {\n        \"id\": 4,\n        \"titulo\": \"O Senhor dos Anéis: O Retorno do Rei\",\n        \"genero\": \"Aventura\",\n        \"duracao\": 201,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1004959-03:00\"\n    },\n    {\n        \"id\": 5,\n        \"titulo\": \"E o Vento Levou\",\n        \"genero\": \"Drama\",\n        \"duracao\": 238,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1005036-03:00\"\n    },\n    {\n        \"id\": 6,\n        \"titulo\": \"Lawrence da Arábia\",\n        \"genero\": \"Aventura\",\n        \"duracao\": 216,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1005112-03:00\"\n    },\n    {\n        \"id\": 7,\n        \"titulo\": \"O Poderoso Chefão: Parte II\",\n        \"genero\": \"Drama\",\n        \"duracao\": 202,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.100518-03:00\"\n    },\n    {\n        \"id\": 8,\n        \"titulo\": \"A Lista de Schindler\",\n        \"genero\": \"Drama\",\n        \"duracao\": 195,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1005442-03:00\"\n    },\n    {\n        \"id\": 9,\n        \"titulo\": \"Cantando na Chuva\",\n        \"genero\": \"Comédia Musical\",\n        \"duracao\": 103,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1005537-03:00\"\n    },\n    {\n        \"id\": 10,\n        \"titulo\": \"O Mágico de Oz\",\n        \"genero\": \"Fantasia\",\n        \"duracao\": 101,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1005617-03:00\"\n    },\n    {\n        \"id\": 11,\n        \"titulo\": \"Cinema Paradiso\",\n        \"genero\": \"Drama\",\n        \"duracao\": 155,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1005683-03:00\"\n    },\n    {\n        \"id\": 12,\n        \"titulo\": \"O Resgate do Soldado Ryan\",\n        \"genero\": \"Ação\",\n        \"duracao\": 169,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1005748-03:00\"\n    },\n    {\n        \"id\": 13,\n        \"titulo\": \"A Noviça Rebelde\",\n        \"genero\": \"Musical\",\n        \"duracao\": 174,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1005818-03:00\"\n    },\n    {\n        \"id\": 14,\n        \"titulo\": \"Forrest Gump\",\n        \"genero\": \"Drama\",\n        \"duracao\": 142,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1005881-03:00\"\n    },\n    {\n        \"id\": 15,\n        \"titulo\": \"Titanic\",\n        \"genero\": \"Romance\",\n        \"duracao\": 195,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006026-03:00\"\n    },\n    {\n        \"id\": 16,\n        \"titulo\": \"A Origem\",\n        \"genero\": \"Ficção Científica\",\n        \"duracao\": 148,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006101-03:00\"\n    },\n    {\n        \"id\": 17,\n        \"titulo\": \"Gladiador\",\n        \"genero\": \"Ação\",\n        \"duracao\": 155,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006169-03:00\"\n    },\n    {\n        \"id\": 18,\n        \"titulo\": \"Clube da Luta\",\n        \"genero\": \"Drama\",\n        \"duracao\": 139,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006326-03:00\"\n    },\n    {\n        \"id\": 19,\n        \"titulo\": \"O Silêncio dos Inocentes\",\n        \"genero\": \"Suspense\",\n        \"duracao\": 118,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006399-03:00\"\n    },\n    {\n        \"id\": 20,\n        \"titulo\": \"A Vida é Bela\",\n        \"genero\": \"Comédia Dramática\",\n        \"duracao\": 116,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006541-03:00\"\n    },\n    {\n        \"id\": 21,\n        \"titulo\": \"Interestelar\",\n        \"genero\": \"Ficção Científica\",\n        \"duracao\": 169,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006619-03:00\"\n    },\n    {\n        \"id\": 22,\n        \"titulo\": \"Matrix\",\n        \"genero\": \"Ação\",\n        \"duracao\": 136,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006688-03:00\"\n    },\n    {\n        \"id\": 23,\n        \"titulo\": \"O Grande Gatsby\",\n        \"genero\": \"Drama\",\n        \"duracao\": 143,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006753-03:00\"\n    },\n    {\n        \"id\": 24,\n        \"titulo\": \"O Rei Leão\",\n        \"genero\": \"Animação\",\n        \"duracao\": 88,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.100682-03:00\"\n    },\n    {\n        \"id\": 25,\n        \"titulo\": \"Amadeus\",\n        \"genero\": \"Drama\",\n        \"duracao\": 160,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006885-03:00\"\n    },\n    {\n        \"id\": 26,\n        \"titulo\": \"A Ponte do Rio Kwai\",\n        \"genero\": \"Drama\",\n        \"duracao\": 161,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1006948-03:00\"\n    },\n    {\n        \"id\": 27,\n        \"titulo\": \"A Malvada\",\n        \"genero\": \"Drama\",\n        \"duracao\": 144,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007011-03:00\"\n    },\n    {\n        \"id\": 28,\n        \"titulo\": \"Uma Linda Mulher\",\n        \"genero\": \"Comédia Romântica\",\n        \"duracao\": 119,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007155-03:00\"\n    },\n    {\n        \"id\": 29,\n        \"titulo\": \"O Pianista\",\n        \"genero\": \"Drama\",\n        \"duracao\": 150,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007225-03:00\"\n    },\n    {\n        \"id\": 30,\n        \"titulo\": \"Os Imperdoáveis\",\n        \"genero\": \"Western\",\n        \"duracao\": 131,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007293-03:00\"\n    },\n    {\n        \"id\": 31,\n        \"titulo\": \"Django Livre\",\n        \"genero\": \"Western\",\n        \"duracao\": 165,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007357-03:00\"\n    },\n    {\n        \"id\": 32,\n        \"titulo\": \"Glória Feita de Sangue\",\n        \"genero\": \"Drama\",\n        \"duracao\": 88,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007422-03:00\"\n    },\n    {\n        \"id\": 33,\n        \"titulo\": \"Quo Vadis\",\n        \"genero\": \"Épico\",\n        \"duracao\": 171,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007489-03:00\"\n    },\n    {\n        \"id\": 34,\n        \"titulo\": \"Os Infiltrados\",\n        \"genero\": \"Policial\",\n        \"duracao\": 151,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007559-03:00\"\n    },\n    {\n        \"id\": 35,\n        \"titulo\": \"12 Anos de Escravidão\",\n        \"genero\": \"Drama\",\n        \"duracao\": 134,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.10077-03:00\"\n    },\n    {\n        \"id\": 36,\n        \"titulo\": \"O Franco Atirador\",\n        \"genero\": \"Drama\",\n        \"duracao\": 133,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007769-03:00\"\n    },\n    {\n        \"id\": 37,\n        \"titulo\": \"Avatar\",\n        \"genero\": \"Ficção Científica\",\n        \"duracao\": 162,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007837-03:00\"\n    },\n    {\n        \"id\": 38,\n        \"titulo\": \"Os Sete Samurais\",\n        \"genero\": \"Ação\",\n        \"duracao\": 207,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1007984-03:00\"\n    },\n    {\n        \"id\": 39,\n        \"titulo\": \"Era Uma Vez no Oeste\",\n        \"genero\": \"Western\",\n        \"duracao\": 165,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1008055-03:00\"\n    },\n    {\n        \"id\": 40,\n        \"titulo\": \"Spartacus\",\n        \"genero\": \"Épico\",\n        \"duracao\": 197,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1008122-03:00\"\n    },\n    {\n        \"id\": 41,\n        \"titulo\": \"Os Bons Companheiros\",\n        \"genero\": \"Policial\",\n        \"duracao\": 146,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.100819-03:00\"\n    },\n    {\n        \"id\": 42,\n        \"titulo\": \"Laranja Mecânica\",\n        \"genero\": \"Ficção Científica\",\n        \"duracao\": 136,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1008339-03:00\"\n    },\n    {\n        \"id\": 43,\n        \"titulo\": \"O Iluminado\",\n        \"genero\": \"Terror\",\n        \"duracao\": 144,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1008424-03:00\"\n    },\n    {\n        \"id\": 44,\n        \"titulo\": \"Cisne Negro\",\n        \"genero\": \"Drama\",\n        \"duracao\": 108,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1008508-03:00\"\n    },\n    {\n        \"id\": 45,\n        \"titulo\": \"A Rede Social\",\n        \"genero\": \"Drama\",\n        \"duracao\": 120,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1008639-03:00\"\n    },\n    {\n        \"id\": 46,\n        \"titulo\": \"O Sexto sentido\",\n        \"genero\": \"Terror\",\n        \"duracao\": 107,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.100871-03:00\"\n    },\n    {\n        \"id\": 48,\n        \"titulo\": \"O Senhor dos Anéis: A Sociedade do Anel\",\n        \"genero\": \"Aventura\",\n        \"duracao\": 178,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.100878-03:00\"\n    },\n    {\n        \"id\": 49,\n        \"titulo\": \"Matrix\",\n        \"genero\": \"Ficção Científica\",\n        \"duracao\": 136,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1008849-03:00\"\n    },\n    {\n        \"id\": 50,\n        \"titulo\": \"Titanic\",\n        \"genero\": \"Romance\",\n        \"duracao\": 195,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1008942-03:00\"\n    },\n    {\n        \"id\": 51,\n        \"titulo\": \"Homem de Ferro\",\n        \"genero\": \"Ação\",\n        \"duracao\": 126,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1009016-03:00\"\n    },\n    {\n        \"id\": 52,\n        \"titulo\": \"Forrest Gump\",\n        \"genero\": \"Drama\",\n        \"duracao\": 142,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.100908-03:00\"\n    },\n    {\n        \"id\": 53,\n        \"titulo\": \"Jurassic Park\",\n        \"genero\": \"Aventura\",\n        \"duracao\": 127,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1009144-03:00\"\n    },\n    {\n        \"id\": 54,\n        \"titulo\": \"Interestelar\",\n        \"genero\": \"Ficção Científica\",\n        \"duracao\": 169,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1009283-03:00\"\n    },\n    {\n        \"id\": 55,\n        \"titulo\": \"Os Incríveis\",\n        \"genero\": \"Animação\",\n        \"duracao\": 115,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1009356-03:00\"\n    },\n    {\n        \"id\": 56,\n        \"titulo\": \"Toy Story\",\n        \"genero\": \"Animação\",\n        \"duracao\": 81,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1009423-03:00\"\n    },\n    {\n        \"id\": 57,\n        \"titulo\": \"As Branquelas\",\n        \"genero\": \"Comédia\",\n        \"duracao\": 109,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1009492-03:00\"\n    },\n    {\n        \"id\": 58,\n        \"titulo\": \"Avatar\",\n        \"genero\": \"Aventura\",\n        \"duracao\": 162,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1009555-03:00\"\n    },\n    {\n        \"id\": 59,\n        \"titulo\": \"Harry Potter e a Pedra Filosofal\",\n        \"genero\": \"Fantasia\",\n        \"duracao\": 152,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.100962-03:00\"\n    },\n    {\n        \"id\": 60,\n        \"titulo\": \"O Rei Leão\",\n        \"genero\": \"Animação\",\n        \"duracao\": 88,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1009687-03:00\"\n    },\n    {\n        \"id\": 61,\n        \"titulo\": \"Piratas do Caribe: A Maldição do Pérola Negra\",\n        \"genero\": \"Aventura\",\n        \"duracao\": 143,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1009866-03:00\"\n    },\n    {\n        \"id\": 62,\n        \"titulo\": \"De Volta para o Futuro\",\n        \"genero\": \"Ficção Científica\",\n        \"duracao\": 116,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1009948-03:00\"\n    },\n    {\n        \"id\": 63,\n        \"titulo\": \"Esqueceram de Mim\",\n        \"genero\": \"Comédia\",\n        \"duracao\": 103,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010017-03:00\"\n    },\n    {\n        \"id\": 64,\n        \"titulo\": \"O Poderoso Chefão\",\n        \"genero\": \"Crime\",\n        \"duracao\": 175,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010083-03:00\"\n    },\n    {\n        \"id\": 65,\n        \"titulo\": \"A Lista de Schindler\",\n        \"genero\": \"Drama\",\n        \"duracao\": 195,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010147-03:00\"\n    },\n    {\n        \"id\": 66,\n        \"titulo\": \"A Bela e a Fera\",\n        \"genero\": \"Animação\",\n        \"duracao\": 84,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010211-03:00\"\n    },\n    {\n        \"id\": 67,\n        \"titulo\": \"Senhor dos Anéis: O Retorno do Rei\",\n        \"genero\": \"Aventura\",\n        \"duracao\": 201,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010287-03:00\"\n    },\n    {\n        \"id\": 68,\n        \"titulo\": \"Indiana Jones e os Caçadores da Arca Perdida\",\n        \"genero\": \"Aventura\",\n        \"duracao\": 115,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010428-03:00\"\n    },\n    {\n        \"id\": 69,\n        \"titulo\": \"Pulp Fiction\",\n        \"genero\": \"Crime\",\n        \"duracao\": 154,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.10105-03:00\"\n    },\n    {\n        \"id\": 70,\n        \"titulo\": \"Gladiador\",\n        \"genero\": \"Ação\",\n        \"duracao\": 155,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010567-03:00\"\n    },\n    {\n        \"id\": 71,\n        \"titulo\": \"Clube da Luta\",\n        \"genero\": \"Drama\",\n        \"duracao\": 139,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010631-03:00\"\n    },\n    {\n        \"id\": 72,\n        \"titulo\": \"O Auto da Compadecida\",\n        \"genero\": \"Comédia\",\n        \"duracao\": 104,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010695-03:00\"\n    },\n    {\n        \"id\": 73,\n        \"titulo\": \"O Silêncio dos Inocentes\",\n        \"genero\": \"Crime\",\n        \"duracao\": 118,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010757-03:00\"\n    },\n    {\n        \"id\": 74,\n        \"titulo\": \"O Grande Gatsby\",\n        \"genero\": \"Drama\",\n        \"duracao\": 143,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010823-03:00\"\n    },\n    {\n        \"id\": 75,\n        \"titulo\": \"Os Vingadores\",\n        \"genero\": \"Ação\",\n        \"duracao\": 143,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1010972-03:00\"\n    },\n    {\n        \"id\": 76,\n        \"titulo\": \"O Sexto Sentido\",\n        \"genero\": \"Drama\",\n        \"duracao\": 107,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011046-03:00\"\n    },\n    {\n        \"id\": 77,\n        \"titulo\": \"Escola de Rock\",\n        \"genero\": \"Comédia\",\n        \"duracao\": 108,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011117-03:00\"\n    },\n    {\n        \"id\": 78,\n        \"titulo\": \"O Código Da Vinci\",\n        \"genero\": \"Mistério\",\n        \"duracao\": 149,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011186-03:00\"\n    },\n    {\n        \"id\": 79,\n        \"titulo\": \"Quem Quer Ser um Milionário?\",\n        \"genero\": \"Drama\",\n        \"duracao\": 120,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.101125-03:00\"\n    },\n    {\n        \"id\": 80,\n        \"titulo\": \"Os Bons Companheiros\",\n        \"genero\": \"Crime\",\n        \"duracao\": 146,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011314-03:00\"\n    },\n    {\n        \"id\": 81,\n        \"titulo\": \"Corra!\",\n        \"genero\": \"Terror\",\n        \"duracao\": 104,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011377-03:00\"\n    },\n    {\n        \"id\": 82,\n        \"titulo\": \"A Vida é Bela\",\n        \"genero\": \"Drama\",\n        \"duracao\": 116,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011441-03:00\"\n    },\n    {\n        \"id\": 83,\n        \"titulo\": \"Clube dos Cinco\",\n        \"genero\": \"Drama\",\n        \"duracao\": 97,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011573-03:00\"\n    },\n    {\n        \"id\": 84,\n        \"titulo\": \"O Iluminado\",\n        \"genero\": \"Terror\",\n        \"duracao\": 146,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011646-03:00\"\n    },\n    {\n        \"id\": 85,\n        \"titulo\": \"Kill Bill Part 1\",\n        \"genero\": \"Ação\",\n        \"duracao\": 111,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011717-03:00\"\n    },\n    {\n        \"id\": 86,\n        \"titulo\": \"500 Dias com Ela\",\n        \"genero\": \"Romance\",\n        \"duracao\": 95,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011781-03:00\"\n    },\n    {\n        \"id\": 87,\n        \"titulo\": \"Psicose\",\n        \"genero\": \"Terror\",\n        \"duracao\": 109,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011846-03:00\"\n    },\n    {\n        \"id\": 88,\n        \"titulo\": \"Frozen: Uma Aventura Congelante\",\n        \"genero\": \"Animação\",\n        \"duracao\": 102,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.101191-03:00\"\n    },\n    {\n        \"id\": 89,\n        \"titulo\": \"O Exorcista\",\n        \"genero\": \"Terror\",\n        \"duracao\": 122,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1011972-03:00\"\n    },\n    {\n        \"id\": 90,\n        \"titulo\": \"Marley & Eu\",\n        \"genero\": \"Comédia\",\n        \"duracao\": 115,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1012107-03:00\"\n    },\n    {\n        \"id\": 91,\n        \"titulo\": \"Um Sonho de Liberdade\",\n        \"genero\": \"Drama\",\n        \"duracao\": 142,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1012273-03:00\"\n    },\n    {\n        \"id\": 92,\n        \"titulo\": \"O Tigre e o Dragão\",\n        \"genero\": \"Ação\",\n        \"duracao\": 120,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1012355-03:00\"\n    },\n    {\n        \"id\": 93,\n        \"titulo\": \"A volta dos que não foram\",\n        \"genero\": \"Ação\",\n        \"duracao\": 130,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1012458-03:00\"\n    },\n    {\n        \"id\": 94,\n        \"titulo\": \"A volta dos que não foram 2\",\n        \"genero\": \"Ação\",\n        \"duracao\": 130,\n        \"horaDaConsulta\": \"2024-02-28T20:58:05.1012527-03:00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "filmeId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5210/filme/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5210",
+					"path": [
+						"filme",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "96"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "filmeId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5210/filme/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5210",
+							"path": [
+								"filme",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "46"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "121"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 Feb 2024 23:58:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 46,\n    \"titulo\": \"O Sexto sentido\",\n    \"genero\": \"Terror\",\n    \"duracao\": 107,\n    \"horaDaConsulta\": \"2024-02-28T20:58:23.6061336-03:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "filme/filmePaginacao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5210/filme/paginacao/skip/90/take/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5210",
+					"path": [
+						"filme",
+						"paginacao",
+						"skip",
+						"90",
+						"take",
+						"10"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "filme/filmePaginacao",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5210/filme/paginacao/skip/5/take/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5210",
+							"path": [
+								"filme",
+								"paginacao",
+								"skip",
+								"5",
+								"take",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "1253"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 Feb 2024 23:58:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 6,\n        \"titulo\": \"Lawrence da Arábia\",\n        \"genero\": \"Aventura\",\n        \"duracao\": 216,\n        \"horaDaConsulta\": \"2024-02-28T20:58:33.170942-03:00\"\n    },\n    {\n        \"id\": 7,\n        \"titulo\": \"O Poderoso Chefão: Parte II\",\n        \"genero\": \"Drama\",\n        \"duracao\": 202,\n        \"horaDaConsulta\": \"2024-02-28T20:58:33.1709564-03:00\"\n    },\n    {\n        \"id\": 8,\n        \"titulo\": \"A Lista de Schindler\",\n        \"genero\": \"Drama\",\n        \"duracao\": 195,\n        \"horaDaConsulta\": \"2024-02-28T20:58:33.1709635-03:00\"\n    },\n    {\n        \"id\": 9,\n        \"titulo\": \"Cantando na Chuva\",\n        \"genero\": \"Comédia Musical\",\n        \"duracao\": 103,\n        \"horaDaConsulta\": \"2024-02-28T20:58:33.1709829-03:00\"\n    },\n    {\n        \"id\": 10,\n        \"titulo\": \"O Mágico de Oz\",\n        \"genero\": \"Fantasia\",\n        \"duracao\": 101,\n        \"horaDaConsulta\": \"2024-02-28T20:58:33.1709903-03:00\"\n    },\n    {\n        \"id\": 11,\n        \"titulo\": \"Cinema Paradiso\",\n        \"genero\": \"Drama\",\n        \"duracao\": 155,\n        \"horaDaConsulta\": \"2024-02-28T20:58:33.1709948-03:00\"\n    },\n    {\n        \"id\": 12,\n        \"titulo\": \"O Resgate do Soldado Ryan\",\n        \"genero\": \"Ação\",\n        \"duracao\": 169,\n        \"horaDaConsulta\": \"2024-02-28T20:58:33.1709987-03:00\"\n    },\n    {\n        \"id\": 13,\n        \"titulo\": \"A Noviça Rebelde\",\n        \"genero\": \"Musical\",\n        \"duracao\": 174,\n        \"horaDaConsulta\": \"2024-02-28T20:58:33.1710031-03:00\"\n    },\n    {\n        \"id\": 14,\n        \"titulo\": \"Forrest Gump\",\n        \"genero\": \"Drama\",\n        \"duracao\": 142,\n        \"horaDaConsulta\": \"2024-02-28T20:58:33.1710067-03:00\"\n    },\n    {\n        \"id\": 15,\n        \"titulo\": \"Titanic\",\n        \"genero\": \"Romance\",\n        \"duracao\": 195,\n        \"horaDaConsulta\": \"2024-02-28T20:58:33.1710159-03:00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "atualizafilme/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Titulo\" : \"A volta dos que não foram 2\",\r\n    \"Genero\" : \"Ação\",\r\n    \"Duracao\" : 130\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5210/filme/atualizarFilme/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5210",
+					"path": [
+						"filme",
+						"atualizarFilme",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "94"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizaFilmeParcial",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/titulo\",\r\n    \"value\": \"O Sexto sentido 3\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5210/filme/atualizarFilmeParcial/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5210",
+					"path": [
+						"filme",
+						"atualizarFilmeParcial",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "97"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "atualizaFilmeParcial",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"op\": \"replace\",\r\n    \"path\": \"/titulo\",\r\n    \"value\": \"O Sexto sentido 3\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5210/filme/atualizarFilmeParcial/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5210",
+							"path": [
+								"filme",
+								"atualizarFilmeParcial",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "97"
+								}
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Feb 2024 00:01:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "deletaFilme/deletarFilme/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5210/filme/deletarFilme/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5210",
+					"path": [
+						"filme",
+						"deletarFilme",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "97"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "deletaFilme/deletarFilme/{id}",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5210/filme/deletarFilme/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5210",
+							"path": [
+								"filme",
+								"deletarFilme",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "97"
+								}
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Feb 2024 00:05:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

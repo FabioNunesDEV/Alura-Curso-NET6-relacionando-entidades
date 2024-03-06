@@ -1,0 +1,227 @@
+﻿[
+  {
+    "titulo": "O Senhor dos Anéis: A Sociedade do Anel",
+    "genero": "Aventura",
+    "duracao": 178
+  },
+  {
+    "titulo": "Matrix",
+    "genero": "Ficção Científica",
+    "duracao": 136
+  },
+  {
+    "titulo": "Titanic",
+    "genero": "Romance",
+    "duracao": 195
+  },
+  {
+    "titulo": "Homem de Ferro",
+    "genero": "Ação",
+    "duracao": 126
+  },
+  {
+    "titulo": "Forrest Gump",
+    "genero": "Drama",
+    "duracao": 142
+  },
+  {
+    "titulo": "Jurassic Park",
+    "genero": "Aventura",
+    "duracao": 127
+  },
+  {
+    "titulo": "Interestelar",
+    "genero": "Ficção Científica",
+    "duracao": 169
+  },
+  {
+    "titulo": "Os Incríveis",
+    "genero": "Animação",
+    "duracao": 115
+  },
+  {
+    "titulo": "Toy Story",
+    "genero": "Animação",
+    "duracao": 81
+  },
+  {
+    "titulo": "As Branquelas",
+    "genero": "Comédia",
+    "duracao": 109
+  },
+  {
+    "titulo": "Avatar",
+    "genero": "Aventura",
+    "duracao": 162
+  },
+  {
+    "titulo": "Harry Potter e a Pedra Filosofal",
+    "genero": "Fantasia",
+    "duracao": 152
+  },
+  {
+    "titulo": "O Rei Leão",
+    "genero": "Animação",
+    "duracao": 88
+  },
+  {
+    "titulo": "Piratas do Caribe: A Maldição do Pérola Negra",
+    "genero": "Aventura",
+    "duracao": 143
+  },
+  {
+    "titulo": "De Volta para o Futuro",
+    "genero": "Ficção Científica",
+    "duracao": 116
+  },
+  {
+    "titulo": "Esqueceram de Mim",
+    "genero": "Comédia",
+    "duracao": 103
+  },
+  {
+    "titulo": "O Poderoso Chefão",
+    "genero": "Crime",
+    "duracao": 175
+  },
+  {
+    "titulo": "A Lista de Schindler",
+    "genero": "Drama",
+    "duracao": 195
+  },
+  {
+    "titulo": "A Bela e a Fera",
+    "genero": "Animação",
+    "duracao": 84
+  },
+  {
+    "titulo": "Senhor dos Anéis: O Retorno do Rei",
+    "genero": "Aventura",
+    "duracao": 201
+  },
+  {
+    "titulo": "Indiana Jones e os Caçadores da Arca Perdida",
+    "genero": "Aventura",
+    "duracao": 115
+  },
+  {
+    "titulo": "Pulp Fiction",
+    "genero": "Crime",
+    "duracao": 154
+  },
+  {
+    "titulo": "Gladiador",
+    "genero": "Ação",
+    "duracao": 155
+  },
+  {
+    "titulo": "Clube da Luta",
+    "genero": "Drama",
+    "duracao": 139
+  },
+  {
+    "titulo": "O Auto da Compadecida",
+    "genero": "Comédia",
+    "duracao": 104
+  },
+  {
+    "titulo": "O Silêncio dos Inocentes",
+    "genero": "Crime",
+    "duracao": 118
+  },
+  {
+    "titulo": "O Grande Gatsby",
+    "genero": "Drama",
+    "duracao": 143
+  },
+  {
+    "titulo": "Os Vingadores",
+    "genero": "Ação",
+    "duracao": 143
+  },
+  {
+    "titulo": "O Sexto Sentido",
+    "genero": "Drama",
+    "duracao": 107
+  },
+  {
+    "titulo": "Escola de Rock",
+    "genero": "Comédia",
+    "duracao": 108
+  },
+  {
+    "titulo": "O Código Da Vinci",
+    "genero": "Mistério",
+    "duracao": 149
+  },
+  {
+    "titulo": "Quem Quer Ser um Milionário?",
+    "genero": "Drama",
+    "duracao": 120
+  },
+  {
+    "titulo": "Os Bons Companheiros",
+    "genero": "Crime",
+    "duracao": 146
+  },
+  {
+    "titulo": "Corra!",
+    "genero": "Terror",
+    "duracao": 104
+  },
+  {
+    "titulo": "A Vida é Bela",
+    "genero": "Drama",
+    "duracao": 116
+  },
+  {
+    "titulo": "Clube dos Cinco",
+    "genero": "Drama",
+    "duracao": 97
+  },
+  {
+    "titulo": "O Iluminado",
+    "genero": "Terror",
+    "duracao": 146
+  },
+  {
+    "titulo": "Kill Bill: Volume 1",
+    "genero": "Ação",
+    "duracao": 111
+  },
+  {
+    "titulo": "500 Dias com Ela",
+    "genero": "Romance",
+    "duracao": 95
+  },
+  {
+    "titulo": "Psicose",
+    "genero": "Terror",
+    "duracao": 109
+  },
+  {
+    "titulo": "Frozen: Uma Aventura Congelante",
+    "genero": "Animação",
+    "duracao": 102
+  },
+  {
+    "titulo": "O Exorcista",
+    "genero": "Terror",
+    "duracao": 122
+  },
+  {
+    "titulo": "Marley & Eu",
+    "genero": "Comédia",
+    "duracao": 115
+  },
+  {
+    "titulo": "Um Sonho de Liberdade",
+    "genero": "Drama",
+    "duracao": 142
+  },
+  {
+    "titulo": "O Tigre e o Dragão",
+    "genero": "Ação",
+    "duracao": 120
+  }
+]
