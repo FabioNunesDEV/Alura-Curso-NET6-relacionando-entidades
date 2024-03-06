@@ -3,20 +3,19 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Configuration.GetConnectionString("FilmeConnection");
+
+builder.Services.AddDbContext<FilmeContext>(opts =>
+    opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+builder.Services.
+    AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 // Add services to the container.
+
 builder.Services.AddControllers().AddNewtonsoftJson();
-
-// Adiciona o AutoMapper a aplicação
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-// Definido conexão com o banco de dados
-var connectionString = builder.Configuration.GetConnectionString("FilmesConnection");
-
-builder.Services.AddDbContext<FilmeContext>(opts => opts.UseMySql (connectionString, ServerVersion.AutoDetect(connectionString)));
-
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
