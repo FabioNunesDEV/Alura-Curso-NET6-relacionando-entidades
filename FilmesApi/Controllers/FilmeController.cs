@@ -92,7 +92,7 @@ public class FilmeController : ControllerBase
 
 
     [HttpDelete("{id}")]
-    public IActionResult DeletaFilme(int id)
+    public IActionResult Filme(int id)
     {
         var filme = _context.Filmes.FirstOrDefault(
             filme => filme.Id == id);
