@@ -15,4 +15,4 @@ Realize alguns tipos de consultas com LINQ<br>
 
 Certificado de conclusão<br>
 
-<img align="center" alt="Dev-HTML" height="500em" src="https://github.com/FabioNunesDEV/Alura-Curso-NET6-relacionando-entidades/blob/main/Certificado/NET6_Relacionando_Entidades.png">
+<img align="center" alt="Dev-HTML" height="500em" src="https://github.com/FabioNunesDEV/Certificados/blob/main/F%C3%A1bio%20Vicente%20Nunes%20-%20Curso%20.NET%206_%20relacionando%20entidades%20-%20Alura.png">
